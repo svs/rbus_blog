@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        background-image: url(/images/obama.png);
+        font-family: Helvetica;
+        font-size: 16px;
+      }
+      #main {
+        margin: 100px;
+        background: black;
+        color: white;
+        opacity: 0.95;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    <div id="disqus_thread"></div>
+
+    </div>
+    <script type="text/javascript" src="http://disqus.com/forums/prole/embed.js"></script><noscript><a href="http://disqus.com/forums/prole/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript">
+      //<![CDATA[
+(function() {
+var links = document.getElementsByTagName('a');
+var query = '?';
+for(var i = 0; i < links.length; i++) {
+    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+      }
+    }
+    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/prole/get_num_replies.js' + query + '"></' + 'script>');
+  })();
+//]]>
+    </script>
+    
+  </body>
+</html>
