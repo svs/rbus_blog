@@ -18,6 +18,10 @@ get "/" do
 end
 
 
+get "/blog" do
+  haml :blog_index
+end
+
 get "/feed" do
   #TODO recreate only on git post commit hook
   File.read("feed.xml")
@@ -71,7 +75,7 @@ helpers do
   end
 end
 
-get "/:title" do
+get "/a/:title" do
   if params[:title].index(".haml")
     t = params[:title].split(".")
     @title = t[0]
