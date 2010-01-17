@@ -66,7 +66,7 @@ def write_feed(request)
 end
   
 def update_blog(request)
-  `cd views/posts;git pull`
+  `git pull`
   write_feed(request)
   "blog updated"
 end
