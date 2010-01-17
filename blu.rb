@@ -75,7 +75,7 @@ helpers do
   end
 end
 
-get "/a/:title" do
+get "/blog/a/:title" do
   if params[:title].index(".haml")
     t = params[:title].split(".")
     @title = t[0]
