@@ -32,9 +32,9 @@ def write_feed(request)
   destination = "test_maker.xml" # local file to write
 
   content = RSS::Maker.make(version) do |m|
-    m.channel.title = "prole.in"
-    m.channel.link = "http://prole.in/blog"
-    m.channel.description = "What the prole has been writing"
+    m.channel.title = "rbus.in"
+    m.channel.link = "http://rbus.in/blog"
+    m.channel.description = "Blog for rBus.in -> commute solving platform"
     m.items.do_sort = true # sort items by date
 
     entries.each do |atime,entry|
@@ -42,7 +42,7 @@ def write_feed(request)
       i.title = entry
       port = request.env["SERVER_PORT"]
       host_root = "http://#{request.env["SERVER_NAME"]}" + (port == "80" ? "" : ":#{port}") 
-      i.link = host_root + "/blog/#{CGI::escape(entry)}"
+      i.link = host_root + "/blog/a/#{CGI::escape(entry)}"
 
       i.description = RedCloth.new(File.read("views/posts/#{entry}")).to_html
       i.date = atime
