@@ -56,11 +56,11 @@ def update_blog(request)
   "blog updated"
 end
 
-get '/update' do #manual update
+get '/blog/update' do #manual update
   update_blog(request)
 end
 
-post '/update' do # for github post-commit hook
+post '/blog/update' do # for github post-commit hook
   update_blog(request)
 end
 
