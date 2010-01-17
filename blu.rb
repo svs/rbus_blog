@@ -22,7 +22,7 @@ get "/blog" do
   haml :blog_index
 end
 
-get "/feed" do
+get "/blog/feed" do
   #TODO recreate only on git post commit hook
   File.read("feed.xml")
 end
