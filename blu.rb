@@ -14,28 +14,9 @@ def entries
 end
 
 get "/" do
-  haml :index
-end
-
-get "/blog/:title" do
-  if params[:title].index(".haml")
-    t = params[:title].split(".")
-    @title = t[0]
-    if t.size == 3
-      layout = File.read("views/posts/layouts/_#{t[1]}.haml")
-    end
-    @haml = haml File.read("views/posts/#{params[:title]}"), :layout => layout
-    @output = RedCloth.new(@haml).to_html
-    @output
-  else
-    @title = params[:title]
-    File.read("views/posts/#{params[:title]}")
-  end
-end
-
-get "/blog" do
   haml :blog_index
 end
+
 
 get "/feed" do
   #TODO recreate only on git post commit hook
@@ -87,5 +68,21 @@ helpers do
       @options = " #{attrs.sort * ' '}" unless attrs.empty?
     end
     "<img src='/images/#{filename}' #{@options}/>"
+  end
+end
+
+get "/:title" do
+  if params[:title].index(".haml")
+    t = params[:title].split(".")
+    @title = t[0]
+    if t.size == 3
+      layout = File.read("views/posts/layouts/_#{t[1]}.haml")
+    end
+    @haml = haml File.read("views/posts/#{params[:title]}"), :layout => layout
+    @output = RedCloth.new(@haml).to_html
+    @output
+  else
+    @title = params[:title]
+    File.read("views/posts/#{params[:title]}")
   end
 end
