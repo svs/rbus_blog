@@ -1,0 +1,6 @@
+%h1 the blog @ rbus.in
+
+%p
+  - entries.each do |k,v|
+    %a{:href => "/blog/#{v}"}
+      = v.split(".")[0]

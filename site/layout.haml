@@ -1,0 +1,45 @@
+%html{ html_attrs("en_us") }
+  %head
+    %title
+      rbus.in
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
+    %link{ :href => "/css/master.css", :rel => "stylesheet", :media => "screen", :type => "text/css", :charset => "utf-8" }/
+  %body
+    #container
+      #header-container
+      #menu
+        %a{:href => "/"}
+          %img{:src => '/images/rbus-logo.png', :border => "0px", :id => "logo"}
+        %span.small#nav
+          %a{:href => "/"}
+            home
+          %a{:href => "/profile"}
+            profile
+          %a{:href => "/trips"}
+            trips
+
+
+      #main-container
+        - message = {}
+        - if message
+          #messages
+            - message.each do |key,value|
+              .flash{:class => key.to_s}
+                =value
+                %br
+        %h1{:style => 'position: relative; left: 750px; top: 30px; background: #540022; padding: 10px 10px 10px 70px; -moz-border-radius: 7px; border-radius: 7px;  width: 150px; z-index: 10;'} 
+          %a{:href => "/blog", :style => "color:white"}
+            blog
+        - if false
+          #main
+            %h2 
+            #faq
+              = yield
+        - else
+          #inner_main{:style => 'position: relative; top: -105px;'}
+            #faq
+              = yield
+        
+      #news
+      /  = twitter_widget
+            
