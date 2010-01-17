@@ -66,16 +66,16 @@ def write_feed(request)
 end
   
 def update_blog(request)
-  `git pull`
+  `git pull origin master`
   write_feed(request)
   "blog updated"
 end
 
-get '/update_blog' do #manual update
+get '/update' do #manual update
   update_blog(request)
 end
 
-post '/update_blog' do # for github post-commit hook
+post '/update' do # for github post-commit hook
   update_blog(request)
 end
 
