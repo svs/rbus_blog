@@ -1,0 +1,268 @@
+html {
+  background: #362e25;
+}
+body {
+  padding: 0px;
+  margin: 5px 2px 2px 2px;
+  font-size: 20px;
+  font-family: Helvetica;
+  background: url(/images/sky_bg.jpg) repeat-x;
+  background-color: #78CDEA;
+}
+#left {
+  width: 200px;
+  height: 200%;
+}
+#main {
+  position: relative;
+  left: 25%;
+  top: -50px;
+  width: 60%;
+  margin: 20px;
+  min-height: 1000px;
+  padding: 10px;
+/*  background: #aeb4c1; */
+  border-radius:10px;
+  -moz-border-radius:10px;
+}
+h1 {
+  font-weight: 700px;
+  font-size: 45px;
+  margin: 3px;
+  letter-spacing: -0.07em;
+}
+h2{
+  font-size: 20px;
+  margin: 0px;
+  position: relative;
+  letter-spacing: -0.05em;
+}
+#trip {
+  background: #f7ae00;
+  letter-spacing: 0px;
+  font-size: 16px;
+  padding: 5px;
+  border: #c48b00 solid 3px;
+  border-radius: 10px;
+  width: 60%;
+  -moz-border-radius: 10px;
+}
+#trip table{
+  width: 60%;
+}
+
+select {
+  width: 110px;
+}
+input[type="text"].big, input[type="password"], select.big {
+  height: 30px;
+  font-size: 20px;
+  width: 250px;
+}
+#menu {
+  padding: 4px;
+  margin: 0px 10px 0px 10px;
+  font-size: 24px;
+  font-family: Verdana;
+  color: white;
+  letter-spacing: 0px;
+}
+
+#menu {
+  height: 45px;
+  font-size: 35px;
+}
+#menu a {
+  text-decoration: none;
+}
+#nav {
+  background: #362e25;
+  float: right;
+  font-family: Arial;
+  font-size: 16px;;
+  -moz-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  top: -4px;
+}
+a {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+#nav a {
+  color: lightgreen;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0px 10px 0px 10px;
+  line-height: 45px;
+}
+#nav a:hover {
+  background-color: #787859;
+}
+#faq { 
+  margin-left: 10%;
+  margin-right: 10%;
+  background: white;
+  padding: 15px;
+  font-size: 20px;
+  letter-spacing: 0px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#faq h1{
+  font-family: Georgia;
+}
+
+.error {
+  background-color: lightpink;
+  border: red solid 2px;
+  padding: 4px;
+}
+
+.error h2 {
+  font-size: 20px;
+}
+
+#messages {
+  position: relative;
+  top: -20px;
+  left: 345px;
+  width: 500px;
+}
+
+.info, .success, .warning, .error, .validation, .notice {
+border: 1px solid;
+padding: 0px 0px 0px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+}
+.info, .notice{
+color: #00529B;
+background-color: #BDE5F8;
+background-image: url('info.png');
+}
+.success {
+color: #4F8A10;
+background-color: #DFF2BF;
+background-image:url('success.png');
+}
+.warning {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('warning.png');
+}
+.error {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('error.png');
+}
+
+#rocket {
+  position: relative;
+  float: left;
+}
+
+#bold {
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+}
+
+#summary {
+  margin: 5px;
+  background: #6D677C;
+  color: white;
+  width: 60%;
+  padding: 8px;
+  background: url(/images/bg_nav_sprite.png);
+  border: #8F87A3 solid 2px;
+}
+
+#summary a {
+  color: lightblue;
+}
+
+#news {
+  position: absolute;
+  right: 3%;
+  top: 190px;
+}
+
+#news h1 {
+  background: url(/images/light_bg.png);
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  width: 300px;
+}
+
+#news ul {
+  margin: 0px;
+  background: url(/images/white_bg.png);
+  padding: 5px;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+#inner_main {
+  margin: 100px 0px 0px 50px;
+  min-height: 1000px;
+  width: 70%;
+  background: white;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  top: 30px;
+}
+
+#inner_main table {
+  font-size: 16px;
+}
+
+#inner_main thead {
+/*  background: url(/images/bg_nav_sprite.png); */
+  background: #362e25;
+  color: lightyellow;
+}
+
+#inner_main thead tr {
+    border: solid 1px #888;
+}
+
+#inner_main tr.odd {
+  background: #ffffed;
+  border-bottom: solid 1px black;
+}
+
+#inner_main tr.even {
+  background: #A9BCC2;
+}
+#inner_main th {
+  padding: 5px;
+}
+
+#inner_main td {
+  padding: 3px;
+}
+
+#login-form {
+  position: relative;
+  left: 350px;
+  background: lightblue;
+  width: 35%;
+  border: solid 2px #6E838A;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  top: -50px;
+  padding: 10px;
+}
