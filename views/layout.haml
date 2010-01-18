@@ -13,7 +13,8 @@
         %span.small#nav
           - if request.cookies["rbus_user"]
             == logged in as #{get_user_from_login_cookie.split(":")[1]}
-            = link_to "[logout]", "/logout"
+            %a{:href =>  "/logout"}
+              [logout]
             %a{:href => "/users/#{get_user_from_login_cookie.split(":")[0]}"}
               profile
           %a{:href => "/trips"}
