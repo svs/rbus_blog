@@ -15,10 +15,12 @@
             == logged in as #{get_user_from_login_cookie.split(":")[1]}
             %a{:href => "/users/#{get_user_from_login_cookie.split(":")[0]}"}
               profile
-          %a{:href => "/"}
-            home
           %a{:href => "/trips"}
             trips
+          %a{:href => "/"}
+            home
+          %a{:href => "/faq"}
+            faq
 
 
       #main-container
