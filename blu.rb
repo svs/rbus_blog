@@ -4,6 +4,8 @@ require 'RedCloth'
 require 'haml'
 require 'cgi'
 require 'rss/maker'
+require 'functions'
+include AuthSystem
 
 def entries
   @posts = {}
@@ -14,6 +16,7 @@ def entries
 end
 
 get "/" do
+  user = get_user_from_login_cookie
   haml :blog_index
 end
 
