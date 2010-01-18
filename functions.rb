@@ -86,7 +86,6 @@ module AuthSystem
 
   # Function to retrieve user's PSV, after decrypting the user cookie.
   def get_user_from_login_cookie
-    debugger
     user_cookie = cookies[COOKIE_NAME]
     if not user_cookie.nil?
       begin

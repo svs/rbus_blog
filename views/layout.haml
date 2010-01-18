@@ -11,10 +11,12 @@
         %a{:href => "/"}
           %img{:src => '/images/rbus-logo.png', :border => "0px", :id => "logo"}
         %span.small#nav
+          - if request.cookies["rbus_user"]
+            == logged in as #{get_user_from_login_cookie.split(":")[1]}
+            %a{:href => "/users/#{get_user_from_login_cookie.split(":")[0]}"}
+              profile
           %a{:href => "/"}
             home
-          %a{:href => "/profile"}
-            profile
           %a{:href => "/trips"}
             trips
 
