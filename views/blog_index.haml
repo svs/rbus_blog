@@ -1,7 +1,7 @@
 %h1 the blog @ rbus.in
 - @entries = entries
 %p
-  - @entries.keys.reverse.each do |k|
+  - @entries.keys.sort.reverse.each do |k|
     %a{:href => "/blog/a/#{@entries[k]}"}
       = @entries[k].split(".")[0]
       %br
